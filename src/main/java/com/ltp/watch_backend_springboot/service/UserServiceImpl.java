@@ -15,7 +15,7 @@ import com.ltp.watch_backend_springboot.repository.UserRepository;
 public class UserServiceImpl implements UserService {
 
     @Autowired
-    private UserRepository UserRepository;
+    private UserRepository userRepository;
 
     public UserServiceImpl() {
         System.out.println("Created the User service implementation");
@@ -24,37 +24,37 @@ public class UserServiceImpl implements UserService {
     public User getUserById(String id) throws NoUserException {
         int index = findIndexById(id);
         if(index != -1){
-            return UserRepository.getUser(index);
+            return userRepository.getUser(index);
         }else{
             throw new NoUserException();
         }
     }
 
     private int findIndexById(String id) throws NoUserException {
-        return IntStream.range(0, UserRepository.getUsers().size())
-                .filter(index -> UserRepository.getUsers().get(index).getId().equals(id))
+        return IntStream.range(0, userRepository.getUsers().size())
+                .filter(index -> userRepository.getUsers().get(index).getId().equals(id))
                 .findFirst()
                 .orElseThrow(() -> new NoUserException()) ;
     }
 
     @Override
     public void saveUser(User User) {
-        UserRepository.saveUser(User);
+        userRepository.saveUser(User);
     }
 
     @Override
     public void updateUser(String id, User User) throws NoUserException {
-        UserRepository.updateUser(findIndexById(id),User);
+        userRepository.updateUser(findIndexById(id),User);
     }
 
     @Override
     public void deleteUser(String id) throws NoUserException {
-        UserRepository.deleteUser(findIndexById(id));
+        userRepository.deleteUser(findIndexById(id));
     }
 
     @Override
     public List<User> getUsers() {
-        return UserRepository.getUsers();
+        return userRepository.getUsers();
     }
 
 }

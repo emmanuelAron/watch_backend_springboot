@@ -25,13 +25,13 @@ public class UserController {
     @Autowired
     private UserService UserService;
 
-    @PostMapping("/User")
+    @PostMapping("/user")
     public ResponseEntity<HttpStatus> createUser(@RequestBody User User){
         UserService.saveUser(User);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    @GetMapping("/User/{id}")
+    @GetMapping("/user/{id}")
     @ResponseBody
     public ResponseEntity<User> getUser(@PathVariable String id) {
         User User = null;
@@ -43,7 +43,7 @@ public class UserController {
         }
     }
 
-    @GetMapping("/User/all")
+    @GetMapping("/user/all")
     @ResponseBody
     public ResponseEntity<List<User>> getUsers() {
         List<User> Users = null;
@@ -55,7 +55,7 @@ public class UserController {
         }
     }
    
-    @PutMapping("/User/{id}")
+    @PutMapping("/user/{id}")
     public ResponseEntity<User> updateUser(@PathVariable String id, @RequestBody User User){
         try{
         UserService.updateUser(id, User);

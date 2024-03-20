@@ -44,14 +44,6 @@ public class User {
         this.name = name;
     }
 
-    public String getpassword() {
-        return this.password;
-    }
-
-    public void setpassword(String password) {
-        this.password = password;
-    }
-
     public String getId() {
         return this.id;
     }
@@ -75,7 +67,5 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    
 
 }

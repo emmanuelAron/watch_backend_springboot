@@ -3,7 +3,7 @@
 WORK TO DO (in progress) : <br>
 Re-creation of watch_backend from scratch but with springboot (java) instead of Express.js and javascript.
 
-TO DO:
+## TO DO:
 - Focus first on the User model. 
 - Test the endpoints with Postman without authentication.
 - Add datas , or prepare data for the needs of the test.
