@@ -9,31 +9,31 @@ import org.springframework.stereotype.Repository;
 import com.ltp.watch_backend_springboot.pojo.User;
 
 @Repository
-public class ContactRepository {
+public class UserRepository {
 
-    private List<User> contacts = new ArrayList<>(Arrays.asList(
+    private List<User> Users = new ArrayList<>(Arrays.asList(
             new User("1","john@gmail.com", "john_password", "John Snow"),
             new User("2","tyron@gmail.com" ,"tyron_password", "Tyrion Lannister"),
             new User("3","hound@gmail.com" ,"hound_password", "The Hound")));
 
-    public List<User> getContacts() {
-        return contacts;
+    public List<User> getUsers() {
+        return Users;
     }
 
-    public User getContact(int index) {
-        return contacts.get(index);
+    public User getUser(int index) {
+        return Users.get(index);
     }
 
-    public void saveContact(User contact) {
-        contacts.add(contact);
+    public void saveUser(User User) {
+        Users.add(User);
     }
 
-    public void updateContact(int index, User contact) {
-        contacts.set(index, contact);
+    public void updateUser(int index, User User) {
+        Users.set(index, User);
     }
 
-    public void deleteContact(int index) {
-        contacts.remove(index);
+    public void deleteUser(int index) {
+        Users.remove(index);
     }
 
 }

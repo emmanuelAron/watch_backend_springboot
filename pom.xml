@@ -11,7 +11,7 @@
 	<groupId>backend_sb</groupId>
 	<artifactId>watch_backend_springboot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<email>watch_backend_springboot</email>
+	<name>watch_backend_springboot</name>
 	<description>Springboot migration version of Express.js watch_backend project</description>
 	<properties>
 		<java.version>17</java.version>

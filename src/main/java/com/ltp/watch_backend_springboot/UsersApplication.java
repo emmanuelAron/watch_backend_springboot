@@ -1,13 +1,13 @@
-package com.ltp.contacts;
+package com.ltp.watch_backend_springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ContactsApplication {
+public class UsersApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ContactsApplication.class, args);
+		SpringApplication.run(UsersApplication.class, args);
 	}
 
 }
